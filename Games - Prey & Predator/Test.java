@@ -21,17 +21,17 @@ public class Test {
 
 
         for (int i = 0; i < 7; i++) {
-            Random rand = new Random();    //Creo un istanza di random (oggetto v di tipo random).
-            int upperbound = 4; //imposto il limite a 4 del massimo valore random ottenibile
+            Random rand = new Random();    //Istance of random object
+            int upperbound = 4;
             int v_leone = rand.nextInt(upperbound);
             int v_gazzella = rand.nextInt(upperbound);
-            System.out.println("gazzella:" + v_gazzella);
-            System.out.println("leone:" + v_leone);
+            System.out.println("gazelle:" + v_gazzella);
+            System.out.println("lion:" + v_leone);
 
             if (v_leone > v_gazzella) {
                 leone.attacco();
                 gazzella.points(v_leone,v_gazzella);
-               // gazzella.life();
+
             } else {
                 gazzella.scappa();
             }
@@ -39,11 +39,11 @@ public class Test {
                 gazzella.death();
                 break;
             }
-            System.out.println("la gazzella ha ancora " + gazzella.getlife() + "punti vita");
+            System.out.println("the gazelle has remain " + gazzella.getlife() + "Healt Points");
 
             System.out.println();
-            System.out.println("ti rimangono " + tiri-- + " tiri" );
-            System.out.println("premi 1 per tirare i dadi ancora i dadi");
+            System.out.println("you still have " + tiri-- + " rolls" );
+            System.out.println("press 1 to roll the dice again");
             while(!response.equals("1")){
                 response = scanner.next();
             }
@@ -57,12 +57,12 @@ public class Test {
         System.out.println();
 
         if(gazzella.getlife() > 0){
-            System.out.println("la gazzella è riuscita a scappare");
+            System.out.println("the gazelle managed to escape from the lion");
 
 
         }
         else{
-            System.out.println("la gazzella è stata mangiata dal leone");
+            System.out.println("the gazelle was eaten by the lion");
             clip.start();
             Thread.sleep(2000);
         }

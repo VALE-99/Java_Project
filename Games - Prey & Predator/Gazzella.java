@@ -2,12 +2,12 @@ public class Gazzella implements Preda {
     int vita = 5;
     @Override
     public void scappa() {
-        System.out.println("scappo dal predatore");
+        System.out.println("the gazelle runs away from the predator");
     }
 
     @Override
     public void life() {
-        System.out.println("mi hanno colpito");
+        System.out.println("the gazelle was hit");
     }
 
     @Override
@@ -17,7 +17,7 @@ public class Gazzella implements Preda {
 
     @Override
     public void death() {
-        System.out.println("La gazzella  morta");
+        System.out.println("The gazelle is dead");
     }
 
     public int getlife() {
